@@ -1,37 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 1 | COMP1073 Client-Side JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500;700;800&family=Playfair+Display:wght@400;600;800&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-	<meta charset="utf-8" />
-	<title>Assignment 1 | COMP1073 Client-Side JavaScript</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-
-<body>
-	<h1>See-N-Say Storymaker</h1>
-	<p id="studentId"></p>
-	<section>
-		<!-- Section with all the buttons for the user to build their story -->
-		<h2>Create Your Story</h2>
-		<button id="noun1">Noun 1</button>
-		<p id="choosenNoun1"></p>
-		<button id="verb">Verb</button>
-		<p id="choosenVerb"></p>
-		<button id="adjective">Adjective</button>
-		<p id="choosenAdjective"></p>
-		<button id="noun2">Noun 2</button>
-		<p id="choosenNoun2"></p>
-		<button id="setting">Setting</button>
-		<p id="choosenSetting"></p>
-	</section>
-	<section>
-		<!-- Section with playback controls to see or hear the story -->
-		<h2>See Your Story</h2>
-		<button id="playback">Show Story</button>
-		<button id="random">Random Story</button>
-		<!-- Empty paragraph to display the story -->
-		<p id="story"></p>
-	</section>
-</body>
-
+  <body>
+    <!-- Header with the title of the page -->
+    <header id="pageHeader">
+      <h1>See-N-Say Storymaker</h1>
+      <h2 class="heading">COMP1073 Assignment #1 - Client Side Javascript</h2>
+      <h3 class="heading">
+        By:
+        <p id="studentName"></p>
+        <p id="studentID"></p>
+      </h3>
+    </header>
+    <main>
+      <div>
+        <section id="data-entry">
+          <!-- Section with all the buttons for the user to build their story -->
+          <img src="./assets/elephant.png" alt="elephant image" />
+          <div class="data">
+            <h2>Create Your Story</h2>
+            <div class="choice">
+              <button id="noun1">Noun 1</button>
+              <p id="noun1Display"></p>
+            </div>
+            <div class="choice">
+              <button id="verb">Verb</button>
+              <p id="verbDisplay"></p>
+            </div>
+            <div class="choice">
+              <button id="adjective">Adjective</button>
+              <p id="adjectiveDisplay"></p>
+            </div>
+            <div class="choice">
+              <button id="noun2">Noun 2</button>
+              <p id="noun2Display"></p>
+            </div>
+            <div class="choice">
+              <button id="setting">Setting</button>
+              <p id="settingDisplay"></p>
+            </div>
+          </div>
+          <img src="./assets/dora.png" alt="dora the explorer image" />
+        </section>
+        <section id="result">
+          <!-- Section with playback controls to see or hear the story -->
+          <div class="data">
+            <h2>See Your Story</h2>
+            <button id="playback">Show Story</button>
+            <button id="random">Random Story</button>
+            <!-- Empty paragraph to display the story -->
+            <p id="story"></p>
+          </div>
+          <img src="./assets/tomandjerry.png" alt="tom and jerry" />
+        </section>
+      </div>
+    </main>
+    <footer>
+      <!-- Footer containing copyright information-->
+      <div>
+        <h1>Wanna Play Again</h1>
+        <h2>So let's reset it!!!</h2>
+      </div>
+      <div>
+		<h2>Click the button to reset the story</h2>
+		<button id="reset">Reset</button>
+	  </div>
+    </footer>
+    <!-- Link to the JavaScript file -->
+    <script src="./js/storymaker.js"></script>
+  </body>
 </html>
